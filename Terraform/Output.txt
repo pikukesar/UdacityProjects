@@ -1,0 +1,38 @@
+Load_balancer_name = "Kesarwani-lb"
+Network_interface_name = [
+  "Kesarwani-0-nic",
+  "Kesarwani-1-nic",
+]
+availset_name = "availset"
+azurerm_virtual_machine = [
+  "Kesarwani0-vm",
+  "Kesarwani1-vm",
+]
+image_id = "/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/RG-EASTUS-SPT-PLATFORM/providers/Microsoft.Compute/images/myPackerImagePK"
+lb_backend_address_pool_name = "BackEndAddressPool"
+public_ip_name = "Kesarwani-public-ip"
+resource_group_id = "/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/myResourceGroupUdacity"
+resource_group_name = "myResourceGroupUdacity"
+subnet_group_name = "Kesarwani-subnet"
+virtual_network_location = "eastus"
+virtual_network_name = "Kesarwani-network"
+prashantkesarwani@prashants-imac NewSolutionfromGITfixversion1 % terraform output
+Load_balancer_name = "Kesarwani-lb"
+Network_interface_name = [
+  "Kesarwani-0-nic",
+  "Kesarwani-1-nic",
+]
+availset_name = "availset"
+azurerm_virtual_machine = [
+  "Kesarwani0-vm",
+  "Kesarwani1-vm",
+]
+image_id = "/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/RG-EASTUS-SPT-PLATFORM/providers/Microsoft.Compute/images/myPackerImagePK"
+lb_backend_address_pool_name = "BackEndAddressPool"
+public_ip_name = "Kesarwani-public-ip"
+resource_group_id = "/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/myResourceGroupUdacity"
+resource_group_name = "myResourceGroupUdacity"
+subnet_group_name = "Kesarwani-subnet"
+virtual_network_location = "eastus"
+virtual_network_name = "Kesarwani-network"
+prashantkesarwani@prashants-imac NewSolutionfromGITfixversion1 % 
