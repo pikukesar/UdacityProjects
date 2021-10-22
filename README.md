@@ -3,7 +3,7 @@ In this project, Coded Packer template in the packer folder and a Terraform temp
 
  Screen shot of Policy and tagging provided in the [Policy Tagging](https://github.com/pikukesar/UdacityProjects/tree/main/Policy%20Tagging) folder
 
-Screen shot of creating Az server principal and Packer build provided in the /Packer Screen Shots/ folder
+Screen shot of creating Az server principal and Packer build provided in the [Packer Screen Shots](https://github.com/pikukesar/UdacityProjects/tree/main/Packer%20Screen%20Shots) folder
 
 Screen shots of Terraform Steps /Terraform Sreenshots/ folder
 
