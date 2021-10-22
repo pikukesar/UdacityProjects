@@ -19,7 +19,7 @@ Install Terraform
 
 Instructions
 
-### Create Azure server principal
+### Create Azure service principal
 ```bash
 az ad sp create-for-rbac --query "{ client_id: appId, client_secret: password, tenant_id: tenant }" 
 ```
