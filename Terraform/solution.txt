@@ -1,0 +1,435 @@
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # azurerm_availability_set.availset will be created
+  + resource "azurerm_availability_set" "availset" {
+      + id                           = (known after apply)
+      + location                     = "eastus"
+      + managed                      = true
+      + name                         = "availset"
+      + platform_fault_domain_count  = 2
+      + platform_update_domain_count = 2
+      + resource_group_name          = "myResourceGroupUdacity"
+      + tags                         = {
+          + "source" = "terraform"
+        }
+    }
+
+  # azurerm_lb.main will be created
+  + resource "azurerm_lb" "main" {
+      + id                   = (known after apply)
+      + location             = "eastus"
+      + name                 = "Kesarwani-lb"
+      + private_ip_address   = (known after apply)
+      + private_ip_addresses = (known after apply)
+      + resource_group_name  = "myResourceGroupUdacity"
+      + sku                  = "Basic"
+      + sku_tier             = "Regional"
+      + tags                 = {
+          + "source" = "terraform"
+        }
+
+      + frontend_ip_configuration {
+          + availability_zone                                  = (known after apply)
+          + gateway_load_balancer_frontend_ip_configuration_id = (known after apply)
+          + id                                                 = (known after apply)
+          + inbound_nat_rules                                  = (known after apply)
+          + load_balancer_rules                                = (known after apply)
+          + name                                               = "publicIPAddress"
+          + outbound_rules                                     = (known after apply)
+          + private_ip_address                                 = (known after apply)
+          + private_ip_address_allocation                      = (known after apply)
+          + private_ip_address_version                         = (known after apply)
+          + public_ip_address_id                               = (known after apply)
+          + public_ip_prefix_id                                = (known after apply)
+          + subnet_id                                          = (known after apply)
+          + zones                                              = (known after apply)
+        }
+    }
+
+  # azurerm_lb_backend_address_pool.main will be created
+  + resource "azurerm_lb_backend_address_pool" "main" {
+      + backend_ip_configurations = (known after apply)
+      + id                        = (known after apply)
+      + load_balancing_rules      = (known after apply)
+      + loadbalancer_id           = (known after apply)
+      + name                      = "BackEndAddressPool"
+      + outbound_rules            = (known after apply)
+      + resource_group_name       = (known after apply)
+    }
+
+  # azurerm_managed_disk.external[0] will be created
+  + resource "azurerm_managed_disk" "external" {
+      + create_option        = "Empty"
+      + disk_iops_read_write = (known after apply)
+      + disk_mbps_read_write = (known after apply)
+      + disk_size_gb         = 10
+      + id                   = (known after apply)
+      + location             = "eastus"
+      + logical_sector_size  = (known after apply)
+      + max_shares           = (known after apply)
+      + name                 = "Kesarwani-disk1"
+      + resource_group_name  = "myResourceGroupUdacity"
+      + source_uri           = (known after apply)
+      + storage_account_type = "Standard_LRS"
+      + tier                 = (known after apply)
+    }
+
+  # azurerm_managed_disk.external[1] will be created
+  + resource "azurerm_managed_disk" "external" {
+      + create_option        = "Empty"
+      + disk_iops_read_write = (known after apply)
+      + disk_mbps_read_write = (known after apply)
+      + disk_size_gb         = 10
+      + id                   = (known after apply)
+      + location             = "eastus"
+      + logical_sector_size  = (known after apply)
+      + max_shares           = (known after apply)
+      + name                 = "Kesarwani-disk2"
+      + resource_group_name  = "myResourceGroupUdacity"
+      + source_uri           = (known after apply)
+      + storage_account_type = "Standard_LRS"
+      + tier                 = (known after apply)
+    }
+
+  # azurerm_network_interface.main[0] will be created
+  + resource "azurerm_network_interface" "main" {
+      + applied_dns_servers           = (known after apply)
+      + dns_servers                   = (known after apply)
+      + enable_accelerated_networking = false
+      + enable_ip_forwarding          = false
+      + id                            = (known after apply)
+      + internal_dns_name_label       = (known after apply)
+      + internal_domain_name_suffix   = (known after apply)
+      + location                      = "eastus"
+      + mac_address                   = (known after apply)
+      + name                          = "Kesarwani-nic0"
+      + private_ip_address            = (known after apply)
+      + private_ip_addresses          = (known after apply)
+      + resource_group_name           = "myResourceGroupUdacity"
+      + tags                          = {
+          + "source" = "terraform"
+        }
+      + virtual_machine_id            = (known after apply)
+
+      + ip_configuration {
+          + gateway_load_balancer_frontend_ip_configuration_id = (known after apply)
+          + name                                               = "mainConfiguration"
+          + primary                                            = (known after apply)
+          + private_ip_address                                 = (known after apply)
+          + private_ip_address_allocation                      = "dynamic"
+          + private_ip_address_version                         = "IPv4"
+          + subnet_id                                          = (known after apply)
+        }
+    }
+
+  # azurerm_network_interface.main[1] will be created
+  + resource "azurerm_network_interface" "main" {
+      + applied_dns_servers           = (known after apply)
+      + dns_servers                   = (known after apply)
+      + enable_accelerated_networking = false
+      + enable_ip_forwarding          = false
+      + id                            = (known after apply)
+      + internal_dns_name_label       = (known after apply)
+      + internal_domain_name_suffix   = (known after apply)
+      + location                      = "eastus"
+      + mac_address                   = (known after apply)
+      + name                          = "Kesarwani-nic1"
+      + private_ip_address            = (known after apply)
+      + private_ip_addresses          = (known after apply)
+      + resource_group_name           = "myResourceGroupUdacity"
+      + tags                          = {
+          + "source" = "terraform"
+        }
+      + virtual_machine_id            = (known after apply)
+
+      + ip_configuration {
+          + gateway_load_balancer_frontend_ip_configuration_id = (known after apply)
+          + name                                               = "mainConfiguration"
+          + primary                                            = (known after apply)
+          + private_ip_address                                 = (known after apply)
+          + private_ip_address_allocation                      = "dynamic"
+          + private_ip_address_version                         = "IPv4"
+          + subnet_id                                          = (known after apply)
+        }
+    }
+
+  # azurerm_network_interface_backend_address_pool_association.main[0] will be created
+  + resource "azurerm_network_interface_backend_address_pool_association" "main" {
+      + backend_address_pool_id = (known after apply)
+      + id                      = (known after apply)
+      + ip_configuration_name   = "mainConfiguration"
+      + network_interface_id    = (known after apply)
+    }
+
+  # azurerm_network_interface_backend_address_pool_association.main[1] will be created
+  + resource "azurerm_network_interface_backend_address_pool_association" "main" {
+      + backend_address_pool_id = (known after apply)
+      + id                      = (known after apply)
+      + ip_configuration_name   = "mainConfiguration"
+      + network_interface_id    = (known after apply)
+    }
+
+  # azurerm_network_interface_security_group_association.main[0] will be created
+  + resource "azurerm_network_interface_security_group_association" "main" {
+      + id                        = (known after apply)
+      + network_interface_id      = (known after apply)
+      + network_security_group_id = (known after apply)
+    }
+
+  # azurerm_network_interface_security_group_association.main[1] will be created
+  + resource "azurerm_network_interface_security_group_association" "main" {
+      + id                        = (known after apply)
+      + network_interface_id      = (known after apply)
+      + network_security_group_id = (known after apply)
+    }
+
+  # azurerm_network_security_group.main will be created
+  + resource "azurerm_network_security_group" "main" {
+      + id                  = (known after apply)
+      + location            = "eastus"
+      + name                = "Kesarwani-nsg"
+      + resource_group_name = "myResourceGroupUdacity"
+      + security_rule       = [
+          + {
+              + access                                     = "Allow"
+              + description                                = ""
+              + destination_address_prefix                 = "*"
+              + destination_address_prefixes               = []
+              + destination_application_security_group_ids = []
+              + destination_port_range                     = "22"
+              + destination_port_ranges                    = []
+              + direction                                  = "Inbound"
+              + name                                       = "SSH"
+              + priority                                   = 1001
+              + protocol                                   = "Tcp"
+              + source_address_prefix                      = "*"
+              + source_address_prefixes                    = []
+              + source_application_security_group_ids      = []
+              + source_port_range                          = "*"
+              + source_port_ranges                         = []
+            },
+        ]
+    }
+
+  # azurerm_public_ip.main will be created
+  + resource "azurerm_public_ip" "main" {
+      + allocation_method       = "Static"
+      + availability_zone       = (known after apply)
+      + fqdn                    = (known after apply)
+      + id                      = (known after apply)
+      + idle_timeout_in_minutes = 4
+      + ip_address              = (known after apply)
+      + ip_version              = "IPv4"
+      + location                = "eastus"
+      + name                    = "Kesarwani-public-ip"
+      + resource_group_name     = "myResourceGroupUdacity"
+      + sku                     = "Basic"
+      + sku_tier                = "Regional"
+      + tags                    = {
+          + "source" = "terraform"
+        }
+      + zones                   = (known after apply)
+    }
+
+  # azurerm_resource_group.main will be created
+  + resource "azurerm_resource_group" "main" {
+      + id       = (known after apply)
+      + location = "eastus"
+      + name     = "myResourceGroupUdacity"
+      + tags     = {
+          + "source" = "terraform"
+        }
+    }
+
+  # azurerm_subnet.main will be created
+  + resource "azurerm_subnet" "main" {
+      + address_prefix                                 = (known after apply)
+      + address_prefixes                               = [
+          + "10.0.0.0/24",
+        ]
+      + enforce_private_link_endpoint_network_policies = false
+      + enforce_private_link_service_network_policies  = false
+      + id                                             = (known after apply)
+      + name                                           = "Kesarwani-subnet"
+      + resource_group_name                            = "myResourceGroupUdacity"
+      + virtual_network_name                           = "Kesarwani-network"
+    }
+
+  # azurerm_virtual_machine.main[0] will be created
+  + resource "azurerm_virtual_machine" "main" {
+      + availability_set_id              = (known after apply)
+      + delete_data_disks_on_termination = false
+      + delete_os_disk_on_termination    = false
+      + id                               = (known after apply)
+      + license_type                     = (known after apply)
+      + location                         = "eastus"
+      + name                             = "Kesarwani0-vm"
+      + network_interface_ids            = (known after apply)
+      + resource_group_name              = "myResourceGroupUdacity"
+      + tags                             = {
+          + "source" = "terraform"
+        }
+      + vm_size                          = "Standard_F2"
+
+      + identity {
+          + identity_ids = (known after apply)
+          + principal_id = (known after apply)
+          + type         = (known after apply)
+        }
+
+      + os_profile {
+          + admin_password = (sensitive value)
+          + admin_username = "testadmin"
+          + computer_name  = "hostname"
+          + custom_data    = (known after apply)
+        }
+
+      + os_profile_linux_config {
+          + disable_password_authentication = false
+        }
+
+      + storage_data_disk {
+          + caching                   = (known after apply)
+          + create_option             = (known after apply)
+          + disk_size_gb              = (known after apply)
+          + lun                       = (known after apply)
+          + managed_disk_id           = (known after apply)
+          + managed_disk_type         = (known after apply)
+          + name                      = (known after apply)
+          + vhd_uri                   = (known after apply)
+          + write_accelerator_enabled = (known after apply)
+        }
+
+      + storage_image_reference {
+          + id      = "/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/myPackerImagePK"
+          + version = (known after apply)
+        }
+
+      + storage_os_disk {
+          + caching                   = "ReadWrite"
+          + create_option             = "FromImage"
+          + disk_size_gb              = (known after apply)
+          + managed_disk_id           = (known after apply)
+          + managed_disk_type         = "Standard_LRS"
+          + name                      = "WSdisk0"
+          + os_type                   = (known after apply)
+          + write_accelerator_enabled = false
+        }
+    }
+
+  # azurerm_virtual_machine.main[1] will be created
+  + resource "azurerm_virtual_machine" "main" {
+      + availability_set_id              = (known after apply)
+      + delete_data_disks_on_termination = false
+      + delete_os_disk_on_termination    = false
+      + id                               = (known after apply)
+      + license_type                     = (known after apply)
+      + location                         = "eastus"
+      + name                             = "Kesarwani1-vm"
+      + network_interface_ids            = (known after apply)
+      + resource_group_name              = "myResourceGroupUdacity"
+      + tags                             = {
+          + "source" = "terraform"
+        }
+      + vm_size                          = "Standard_F2"
+
+      + identity {
+          + identity_ids = (known after apply)
+          + principal_id = (known after apply)
+          + type         = (known after apply)
+        }
+
+      + os_profile {
+          + admin_password = (sensitive value)
+          + admin_username = "testadmin"
+          + computer_name  = "hostname"
+          + custom_data    = (known after apply)
+        }
+
+      + os_profile_linux_config {
+          + disable_password_authentication = false
+        }
+
+      + storage_data_disk {
+          + caching                   = (known after apply)
+          + create_option             = (known after apply)
+          + disk_size_gb              = (known after apply)
+          + lun                       = (known after apply)
+          + managed_disk_id           = (known after apply)
+          + managed_disk_type         = (known after apply)
+          + name                      = (known after apply)
+          + vhd_uri                   = (known after apply)
+          + write_accelerator_enabled = (known after apply)
+        }
+
+      + storage_image_reference {
+          + id      = "/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/myPackerImagePK"
+          + version = (known after apply)
+        }
+
+      + storage_os_disk {
+          + caching                   = "ReadWrite"
+          + create_option             = "FromImage"
+          + disk_size_gb              = (known after apply)
+          + managed_disk_id           = (known after apply)
+          + managed_disk_type         = "Standard_LRS"
+          + name                      = "WSdisk1"
+          + os_type                   = (known after apply)
+          + write_accelerator_enabled = false
+        }
+    }
+
+  # azurerm_virtual_machine_data_disk_attachment.external[0] will be created
+  + resource "azurerm_virtual_machine_data_disk_attachment" "external" {
+      + caching                   = "ReadWrite"
+      + create_option             = "Attach"
+      + id                        = (known after apply)
+      + lun                       = 10
+      + managed_disk_id           = (known after apply)
+      + virtual_machine_id        = (known after apply)
+      + write_accelerator_enabled = false
+    }
+
+  # azurerm_virtual_machine_data_disk_attachment.external[1] will be created
+  + resource "azurerm_virtual_machine_data_disk_attachment" "external" {
+      + caching                   = "ReadWrite"
+      + create_option             = "Attach"
+      + id                        = (known after apply)
+      + lun                       = 11
+      + managed_disk_id           = (known after apply)
+      + virtual_machine_id        = (known after apply)
+      + write_accelerator_enabled = false
+    }
+
+  # azurerm_virtual_network.main will be created
+  + resource "azurerm_virtual_network" "main" {
+      + address_space         = [
+          + "10.0.0.0/24",
+        ]
+      + dns_servers           = (known after apply)
+      + guid                  = (known after apply)
+      + id                    = (known after apply)
+      + location              = "eastus"
+      + name                  = "Kesarwani-network"
+      + resource_group_name   = "myResourceGroupUdacity"
+      + subnet                = (known after apply)
+      + tags                  = {
+          + "source" = "terraform"
+        }
+      + vm_protection_enabled = false
+    }
+
+Plan: 20 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  + image_id = "/subscriptions/522b5d75-2fbe-4fb5-b2d5-6c15a215feca/resourceGroups/RG-EASTUS-SPT-PLATFORM/providers/Microsoft.Compute/images/myPackerImagePK"
+
+─────────────────────────────────────────────────────────────────────────────
+
+Note: You didn't use the -out option to save this plan, so Terraform can't
+guarantee to take exactly these actions if you run "terraform apply" now.
