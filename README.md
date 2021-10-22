@@ -1,7 +1,7 @@
 # Udacity Project
 In this project, Coded Packer template in the packer folder and a Terraform template in the terraform folder . The templates are customizable by changing the values and adding removing configuration as needed in the variable.tf file has the values that can used to change number of VMs and other properties.
 
- Screen shot of Policy and tagging provided in the /Policy Tagging/ folder
+ Screen shot of Policy and tagging provided in the [Policy Tagging](https://github.com/pikukesar/UdacityProjects/tree/main/Policy%20Tagging) folder
 
 Screen shot of creating Az server principal and Packer build provided in the /Packer Screen Shots/ folder
 
