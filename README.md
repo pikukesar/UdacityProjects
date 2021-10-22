@@ -55,7 +55,7 @@ Create a terraform file main.tf and variable.tf
 
 * Deploy all Azure resources using terraform commands
 
-Please make sure to update tests as appropriate.
+Please make sure you download the Terraform folder and cd into it. then run the commands below
 
 ```bash
 terraform init
