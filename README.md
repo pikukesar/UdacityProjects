@@ -1,52 +1,80 @@
-# UdacityProjects
+# Udacity Project
+In this project, Coded Packer template in the packer folder and a Terraform template in the terraform folder . The templates are customizable by changing the values and adding removing configuration as needed in the variable.tf file has the values that can used to change number of VMs and other properties.
 
-In this project, Coded Packer template in the packer folder and a Terraform template in the terraform folder . The templates are customizable by changing the values and adding removing configuration as needed inthe variable.tf file has the values that can used to change number of VMs and other properties.
-Getting Started
-Clone this repository
+ Screen shot of Policy and tagging provided in the /Policy Tagging/ folder
 
-Create your infrastructure as code
+Screen shot of creating Az server principal and Packer build provided in the /Packer Screen Shots/ folder
 
-Update this README to reflect how someone would use your code.
+Screen shots of Terraform Steps /Terraform Sreenshots/ folder
 
-Dependencies
+## Dependencies
+
 Create an Azure Account
+
 Install the Azure command line interface
+
 Install Packer
+
 Install Terraform
+
 Instructions
-Create Azure credentials
 
-Create a service principal with az ad sp create-for-rbac and output the credentials
-Use the command az ad sp create-for-rbac --query "{ client_id: appId, client_secret: password, tenant_id: tenant }"
-Replace the client_id , client_secret and tenent_id in the webserver.json
+### Create Azure server principal
+```bash
+az ad sp create-for-rbac --query "{ client_id: appId, client_secret: password, tenant_id: tenant }" 
+```
 
+### Build the image using packer
 
+```bash
+packer build server.json
+```
+
+## Terraform Template Incudes
 Create a terraform file main.tf and variable.tf
-Create a Resource Group
-Create a virtual network and a subnet on the virtual network
-Create a Network Security Group
-Create a Network Interface
-Create a Public IP
-Create a Load Balancer
-Create a virtual machine availability set
-Create virtual machines. Make sure you use the image you deployed using packer
-Create managed disks for your virtual machines
-Ensure declarative configuration is possible by using variable.tf file
-Deploy all Azure resources
 
-Terraform steps
+* Create a Resource Group
+
+* Create a virtual network and a subnet on the virtual network
+
+* Create a Network Security Group
+
+* Create a Network Interface
+
+* Create a Public IP
+
+* Create a Load Balancer
+
+* Create a virtual machine availability set
+
+* Create virtual machines. Make sure you use the image you deployed using packer
+
+* Create managed disks for your virtual machines
+
+* Ensure declarative configuration is possible by using variable.tf file
+
+* Deploy all Azure resources using terraform commands
+
+Please make sure to update tests as appropriate.
+
+```bash
 terraform init
 terraform validate
 terraform fmt
 terraform plan -out solution.plan
+terraform plan -no-color > solution.txt
 terraform apply -auto-approve
-terraform out : this file has been uploaded to the Terraform
-Apply the deployment using terraform apply
-Deploy all Azure resources
+```
+terraform output : this file has been uploaded to the /Terraform/ folder
+
+terraform screenshots : this file has been uploaded to the /Terraform Sreenshots/ folder
 
 # Destroy Resources
+```bash
 terraform destroy -auto-approve
-
+```
 # Clean-Up
+```bash
 rm -rf .terraform*
 rm -rf terraform.tfstate*
+```
