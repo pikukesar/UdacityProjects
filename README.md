@@ -24,13 +24,13 @@ Instructions
 az ad sp create-for-rbac --query "{ client_id: appId, client_secret: password, tenant_id: tenant }" 
 ```
 
-### Build the image using packer [link ->](https://github.com/pikukesar/UdacityProjects/blob/main/Packer/server.json)
+### Build the image using packer [server.json](https://github.com/pikukesar/UdacityProjects/blob/main/Packer/server.json)
 
 ```bash
 packer build server.json
 ```
 
-## Terraform Template Incudes [link->](https://github.com/pikukesar/UdacityProjects/tree/main/Terraform)
+## Terraform Template Incudes [Terraform](https://github.com/pikukesar/UdacityProjects/tree/main/Terraform)
 Create a terraform file main.tf and variable.tf
 
 * Create a Resource Group
@@ -67,7 +67,7 @@ terraform apply -auto-approve
 ```
 terraform output : this file has been uploaded to the /Terraform/ folder
 
-terraform screenshots : this file has been uploaded to the /Terraform Sreenshots/ [link->](https://github.com/pikukesar/UdacityProjects/tree/main/Terraform) folder
+terraform screenshots : this file has been uploaded to the /Terraform Sreenshots/ [Terraform](https://github.com/pikukesar/UdacityProjects/tree/main/Terraform) folder
 
 # Destroy Resources
 ```bash
