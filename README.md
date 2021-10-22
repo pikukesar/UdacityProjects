@@ -32,6 +32,7 @@ packer build server.json
 
 ## Terraform Template Incudes
 [Terraform folder](https://github.com/pikukesar/UdacityProjects/tree/main/Terraform)
+
 Create a terraform file main.tf and variable.tf
 
 * Create a Resource Group
