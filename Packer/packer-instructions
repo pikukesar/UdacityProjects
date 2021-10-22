@@ -7,7 +7,7 @@ az ad sp create-for-rbac --query "{ client_id: appId, client_secret: password, t
 az account show --query "{ subscription_id: id }"
 
 # Build the image
-packer build ubuntu.json
+packer build server.json
 
 # Create VM from Azure Image
 az vm create --resource-group myResourceGroup --name myVM --image myPackerImage --admin-username azureuser --generate-ssh-keys
