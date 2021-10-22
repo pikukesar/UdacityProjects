@@ -30,7 +30,8 @@ az ad sp create-for-rbac --query "{ client_id: appId, client_secret: password, t
 packer build server.json
 ```
 
-## Terraform Template Incudes [Terraform](https://github.com/pikukesar/UdacityProjects/tree/main/Terraform)
+## Terraform Template Incudes
+[Terraform folder](https://github.com/pikukesar/UdacityProjects/tree/main/Terraform)
 Create a terraform file main.tf and variable.tf
 
 * Create a Resource Group
