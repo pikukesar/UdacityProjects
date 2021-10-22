@@ -17,23 +17,23 @@ variable "resource_group" {
 
 variable "username" {
   description = "Enter username to associate with the machine"
-  default     =  "UdacityUser"
-} 
+  default     = "UdacityUser"
+}
 
 variable "password" {
   description = "Enter password to use to access the machine"
-  default     =  "UdacityPassword@1#443"
+  default     = "UdacityPassword@1#443"
 }
 
 variable "packer_resource_group" {
   description = "Resource group of the Packer image"
-  default     =  "myResourceGroup"
+  default     = "myResourceGroup"
   type        = string
 }
 
 variable "packer_image_name" {
   description = "Image name of the Packer image"
-  default     =  "myPackerImagePK"
+  default     = "myPackerImagePK"
   type        = string
 }
 
@@ -42,6 +42,7 @@ variable "num_of_vms" {
   default     = 2
   type        = number
 }
+
 variable "tags" {
   type        = map(string)
   description = "A map of the tags to use on the resources that are deployed with this module."
