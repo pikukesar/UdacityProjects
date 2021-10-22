@@ -19,7 +19,7 @@ Install Terraform
 
 Instructions
 
-### Create Azure service principal
+### Create Azure service principal : [output and results](https://github.com/pikukesar/UdacityProjects/tree/main/Policy%20Tagging)
 ```bash
 az ad sp create-for-rbac --query "{ client_id: appId, client_secret: password, tenant_id: tenant }" 
 ```
